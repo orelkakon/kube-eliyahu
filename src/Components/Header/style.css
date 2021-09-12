@@ -1,0 +1,16 @@
+#menu-list-item{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-family:monospace;
+    font-weight: 900;
+}
+@media only screen and (min-width: 960px) {
+    #menu-list-item{
+        font-size: 30px;
+        font-family: Guttman Yad-Brush;
+    }
+}
+#menu-list-item:hover{
+    text-decoration: underline;
+}
