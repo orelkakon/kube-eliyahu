@@ -1,0 +1,12 @@
+h1, h2, h3{
+    text-align: center;
+}
+
+.p{
+    font-size: medium;
+}
+
+#policy{
+    direction: rtl;
+    margin: 10px;
+}

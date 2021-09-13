@@ -7,6 +7,6 @@ export const FullFooter = styled.div`
     text-align: center;
     background-color: #cea086;
     @media only screen and (min-width: 960px) {
-        height: 70px;
+        height: 50px;
     }
 `;

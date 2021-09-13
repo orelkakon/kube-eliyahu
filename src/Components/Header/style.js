@@ -10,7 +10,7 @@ export const FullHeader = styled.div`
     width: 100%;
     height: 100px;
     @media only screen and (min-width: 960px) {
-        height: 250px;
+        height: 200px;
     }
 `;
 
@@ -19,7 +19,8 @@ export const MenuHeader = styled.div`
     flex-direction: row;
     align-items: center;
     @media only screen and (min-width: 960px) {
-        margin-left: 250px;
+        margin-right: 30px;
+        margin-left: 100px;
     }
 `;
 
@@ -30,7 +31,7 @@ export const MenuElement = styled.div`
     }
 `;
 
-export const PrimaryLogo = styled.div`
+export const PrimaryLogo = styled.a`
     margin-right: 5px;
     background: url(${primaryLogo}) no-repeat center;
     -webkit-background-size: cover;
@@ -42,7 +43,7 @@ export const PrimaryLogo = styled.div`
     border-radius: 20px 20px 20px 20px;
     @media only screen and (min-width: 960px) {
         width: 250px;
-        height: 250px;
+        height: 200px;
         border-radius: 200px 200px 200px 200px;
     }
 `;

@@ -24,7 +24,7 @@ const Header = () => {
                 </MenuElement>
             </MenuHeader>
 
-            <PrimaryLogo />
+            <PrimaryLogo href="/"/>
 
         </FullHeader>
     );
