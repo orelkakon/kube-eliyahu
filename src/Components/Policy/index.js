@@ -4,7 +4,7 @@ import './style.css'
 const OrderPolicy = () => {
     return (
         <div id="policy">
-            <h1>תקנון האתר</h1>
+            <p style={{ textAlign:"center", fontSize: "40px", fontWeight: "bold" }}>תקנון האתר</p>
             <p>ברוכים הבאים לקובה אליהו (להלן: “www.kube-eliyahu.co.il”).   
             <br />האתר מופעל ע”י קובה אליהו ומתוחזק ע"י המפתח אוראל קקון.   
             <br />האתר משמש למכירת אוכל מוכן וקפוא.</p>

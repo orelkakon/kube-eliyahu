@@ -6,6 +6,8 @@ import Footer from './Components/Footer/index'
 import Contact from './Components/Contact/index'
 import WhatsappIcon from './Components/WhatsAppIcon/index'
 import OrderPolicy from './Components/Policy/index'
+import QA from './Components/Q&A/index'
+import Recommends from './Components/Recommends/index'
 
 const App = () => {
   return (
@@ -21,12 +23,12 @@ const App = () => {
 
         <Route path="/recommends" exact strict render={
           () => (
-            <HomePage />
+            <Recommends />
           )
         } />
         <Route path="/q-and-a" exact strict render={
           () => (
-            <HomePage />
+            <QA />
           )
         } />
         <Route path="/contact" exact strict render={

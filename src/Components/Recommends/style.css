@@ -1,0 +1,12 @@
+.carousel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+}
+
+@media only screen and (min-width: 960px) {
+    .carousel{
+        width: 35%;
+    }
+}

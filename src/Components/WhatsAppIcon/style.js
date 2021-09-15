@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import WhatsappIcon from '.';
 import whatsappLogo from './../../Assets/whatsappLogo.png'
 
 export const Icon = styled.a`
@@ -16,4 +15,8 @@ export const Icon = styled.a`
     right: 15px;
     z-index: 10;
     cursor: pointer;
+    &:hover{
+        transform: scale(0.8);
+        transition-duration: 1s; 
+    }
 `;

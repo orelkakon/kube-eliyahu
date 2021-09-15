@@ -3,6 +3,7 @@ import { FullHeader, PrimaryLogo, MenuHeader, MenuElement } from './style'
 import { NavLink } from 'react-router-dom';
 import { HOME_PAGE, Q_AND_A, CONTACT, POLICY, RECOMMENDES } from './hebrew'
 import './style.css'
+
 const Header = () => {
     return (
         <FullHeader>

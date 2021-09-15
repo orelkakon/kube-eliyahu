@@ -4,8 +4,9 @@ import primaryLogo from './../../Assets/primaryLogo.png'
 
 export const FullHeader = styled.div`
     display: flex;
-    background-color: #cea086;
+    background-color: #767c85;
     justify-content: space-between;
+    align-items: center;
     text-align: center;
     width: 100%;
     height: 100px;
@@ -39,11 +40,10 @@ export const PrimaryLogo = styled.a`
     -o-background-size: cover;
     background-size: cover;
     width: 120px;
-    height: 100px;
-    border-radius: 20px 20px 20px 20px;
+    height: 80px;
+    border-radius: 200px 200px 200px 200px;
     @media only screen and (min-width: 960px) {
-        width: 250px;
-        height: 200px;
-        border-radius: 200px 200px 200px 200px;
+        width: 190px;
+        height: 190px;
     }
 `;

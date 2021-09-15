@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
-export const FullFooter = styled.div`
+export const QADiv = styled.div`
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
-    background-color: gray;
+    width: 95%;
+    height: auto;
     @media only screen and (min-width: 960px) {
-        height: 50px;
+        width: 98%;
+
     }
 `;
