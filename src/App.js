@@ -8,6 +8,7 @@ import WhatsappIcon from './Components/WhatsAppIcon/index'
 import OrderPolicy from './Components/Policy/index'
 import QA from './Components/Q&A/index'
 import Recommends from './Components/Recommends/index'
+import CartIcon from './Components/CartIcon/index';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <WhatsappIcon />
+        <CartIcon />
         <Route path="/" exact strict render={
           () => (
             <HomePage />

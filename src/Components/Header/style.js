@@ -39,8 +39,8 @@ export const PrimaryLogo = styled.a`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 120px;
-    height: 80px;
+    width: 125px;
+    height: 95px;
     border-radius: 200px 200px 200px 200px;
     @media only screen and (min-width: 960px) {
         width: 190px;

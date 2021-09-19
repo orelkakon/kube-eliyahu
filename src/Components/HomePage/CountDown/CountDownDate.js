@@ -17,7 +17,7 @@ const SPECIAL_FREE_TEXT = "" //TODO: take from CMS speical data
 const CountDownDate = () => {
     return (
         <CountDownDateDiv>
-            <p style={{ direction: 'rtl', fontSize: "30px" }}>{HAS_TIME}</p>
+            <p style={{ direction: 'rtl', fontSize: "30px"}}>{HAS_TIME}</p>
             <Countdown date={Date.now() + 300000950} renderer={renderer}>
             </Countdown>
             <p style={{ direction: 'rtl', fontSize: "25px" }}>{CLOSED_ORDERD}</p>
