@@ -1,7 +1,7 @@
 import React from 'react';
 import { RecommenedsDiv } from './style'
 import { TITLE, SEC_TITLE } from './hebrew'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './style.css'
 import { Carousel } from 'react-responsive-carousel';
 import R1 from './../../Assets/r1.png'

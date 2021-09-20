@@ -15,7 +15,7 @@ const Contact = () => {
             <br />
             <br />
             <a href="https://www.instagram.com/kube_eliyahu/" target="_blank" rel="noreferrer"> <img className="aa" src={instaLogo} alt="instaLogo" height="100px" width="100px" /></a>
-            <a href="https://www.facebook.com/profile.php?id=100067058032269" style={{paddingTop:"5px"}} npm nptarget="_blank" rel="noreferrer"> <img className="aa" src={facebookLogo} alt="facebook" height="100px" width="100px" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100067058032269" style={{paddingTop:"5px"}}  target="_blank" rel="noreferrer"> <img className="aa" src={facebookLogo} alt="facebook" height="100px" width="100px" /></a>
             <a href="mailto:kubeeliyahu@gmail.com" style={{paddingTop:"5px"}}> <img className="aa" src={mailLogo} alt="phoneLogo" height="100px" width="100px" /></a>
             <a href="tel:+972509913750"> <img className="aa" src={phoneLogo} alt="phoneLogo" height="115px" width="115px" /></a>
             <br />

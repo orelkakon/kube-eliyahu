@@ -1,6 +1,35 @@
-// NOT SUPPORTED NOW!
-export const actionCreators = {
-  addToList: data => ({ type: "ADD_ITEM_TO_CART", payload: data }),
-  removeItem: data => ({ type: "REMOVE_ITEM_FROM_CART", payload: data }),
-  clearItems: () => ({ type: "CLEAR_ITEMS" })
-};
+
+export const actionAddItem = (name, count) => {
+  return({
+    type: "ADD_ITEM_TO_CART",
+    payload: {
+      name,
+      count
+    }
+  })
+}
+
+export const actionUpdateItem = (name, count) => {
+  return({
+    type: "UPDATE_ITEM_ON_CART",
+    payload: {
+      name,
+      count
+    }
+  })
+}
+
+export const actionRemoveItem = (name) => {
+  return({
+    type: "REMOVE_ITEM_FROM_CART",
+    payload: {
+      name
+    }
+  })
+}
+
+export const actionDeleteItems = () => {
+  return({
+    type: "CLEAR_ITEMS"
+  })
+}
