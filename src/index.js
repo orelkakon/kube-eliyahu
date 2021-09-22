@@ -8,6 +8,14 @@ import { Provider } from 'react-redux'
 
 const store = createStore(cartReducer);
 
+store.dispatch({
+  type: "ADD_ITEM_TO_CART",
+  payload: {
+    name: 'aaaaa',
+    count: 2,
+    price: 20
+  }
+})
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

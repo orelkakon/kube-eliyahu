@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <FullFooter>
              <p>
-                כל הזכויות שמורות לקובה אליהו. האתר פותח ע"י <a style={{color:'black'}} href="http://www.orelkakon.online/">אוראל קקון</a> 2021 Ⓒ
+                כל הזכויות שמורות לקובה אליהו. האתר פותח ע"י <a style={{color:'black'}} href="http://www.orelkakon.online/" target="_blank" rel="noreferrer">אוראל קקון</a> 2021 Ⓒ
             </p>
         </FullFooter>
     );

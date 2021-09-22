@@ -7,6 +7,7 @@ export const cartReducer = (state = initialCart, action) => {
                 {
                     name: action.payload.name,
                     count: action.payload.count,
+                    price: action.payload.price,
                 }
             ]
         case "UPDATE_ITEM_ON_CART":
