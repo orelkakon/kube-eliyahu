@@ -21,7 +21,7 @@ const Checkout = () => {
         <CheckoutDiv>
             <p style={{ fontSize: "40px", fontWeight: "bold" }}>{TITLE}</p>
             <CheckoutForm>
-                <label style={{ fontSize: "30px" }}>{todayDate}</label>
+                <label style={{ fontSize: "40px", fontWeight: "bold"}}>{todayDate}</label>
                 <SingleInput>
                     <InputTextBox onChange={e => setFirstName(e.target.value)}></InputTextBox>
                     <InputTitle><Required>*</Required>{NAME}</InputTitle>

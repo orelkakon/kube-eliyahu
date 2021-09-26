@@ -1,7 +1,12 @@
 td, table, th {
-    border:1px solid black;
+    border: 1px solid black;
 }
 
 th {
     padding: 5px;
+    font-size: large;
+}
+
+td{
+    font-weight: 700;
 }

@@ -3,8 +3,11 @@ import { FullHeader, PrimaryLogo, MenuHeader, MenuElement } from './style'
 import { NavLink } from 'react-router-dom';
 import { HOME_PAGE, Q_AND_A, CONTACT, POLICY, RECOMMENDES } from './hebrew'
 import './style.css'
+import { useHistory } from "react-router-dom";
+
 
 const Header = () => {
+    let history = useHistory();
     return (
         <FullHeader>
             <MenuHeader>
@@ -25,7 +28,7 @@ const Header = () => {
                 </MenuElement>
             </MenuHeader>
 
-            <PrimaryLogo href="/"/>
+            <PrimaryLogo onClick={() => history.push('/')}/>
 
         </FullHeader>
     );

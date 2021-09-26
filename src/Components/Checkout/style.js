@@ -61,10 +61,10 @@ export const CheckboxPolicy = styled.div`
 export const SendInvitation = styled.button`
     width: 200px;
     height: 30px;
-    font-size: large;
+    font-size: 21px;
     font-weight: bold;
-    
-
+    background-color: #cea086;
+    border-radius: 12px
 
 `;
 

@@ -11,7 +11,24 @@ const store = createStore(cartReducer);
 store.dispatch({
   type: "ADD_ITEM_TO_CART",
   payload: {
-    name: 'aaaaa',
+    name: 'קובה מנסופיה',
+    count: 4,
+    price: 10
+  }
+})
+
+store.dispatch({
+  type: "ADD_ITEM_TO_CART",
+  payload: {
+    name: 'קובה חמוסטה חמוץ מאוד עם סלרי ולימון',
+    count: 3,
+    price: 35
+  }
+})
+store.dispatch({
+  type: "ADD_ITEM_TO_CART",
+  payload: {
+    name: 'קובה סלק',
     count: 2,
     price: 20
   }

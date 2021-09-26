@@ -32,8 +32,10 @@ export const MenuElement = styled.div`
     }
 `;
 
-export const PrimaryLogo = styled.a`
+export const PrimaryLogo = styled.button`
     margin-right: 5px;
+    border:none;
+    cursor: pointer;
     background: url(${primaryLogo}) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
