@@ -28,6 +28,7 @@ const PeekCart = (props) => {
                             }
                         </ProductsCart>
                         <p style={{ fontSize: "20px", fontWeight: "bold" }}>{SUBTOTAL} {`${getTotalSum(cart)}₪`}</p>
+                        
                         <SendInvitation onClick={() => movePage('/mycart')}>{SHOW_CART}</SendInvitation>
                         <SendInvitation onClick={() => movePage('/checkout')}>{GO_CHECHKOUT}</SendInvitation>
                     </>

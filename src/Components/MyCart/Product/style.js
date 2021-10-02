@@ -5,7 +5,7 @@ export const ProductDiv = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    border-bottom: 2px solid black;
+    border-bottom: ${props => props.addBreakLine && '2px solid black'};
     padding: 10px;
     align-items: flex-start;
 `;
@@ -15,14 +15,12 @@ export const ProductContent = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 10px;
-    word-wrap: break-word;
-    width: 100px;
+    width: 200px;
 `;
 
 export const ProductImg = styled.img`
-    height: 200px; 
-    width: 150px;
+    height: 220px; 
+    width: 180px;
 `;
 
 export const DeleteButton = styled.button`
@@ -35,4 +33,12 @@ export const DeleteButton = styled.button`
     background-size: cover;
     width: 30px;
     height: 30px;
+`;  
+
+export const SumInput = styled.input`
+    text-align: center;
+    width: 45px;
+    height: 30px;
+    border: 3px solid black;
+    font-size: medium;
 `;

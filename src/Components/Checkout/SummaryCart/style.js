@@ -6,7 +6,7 @@ export const SummaryCartDiv = styled.div`
 `;
 
 export const CartTable = styled.table`
-    width: 95%;
+    width: 90%;
     box-shadow: 0 0 9px 2px rgba(0, 0, 0, 65%);
 
 `;

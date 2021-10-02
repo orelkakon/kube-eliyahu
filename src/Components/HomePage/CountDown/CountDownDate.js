@@ -18,7 +18,7 @@ const CountDownDate = () => {
     return (
         <CountDownDateDiv>
             <p style={{ direction: 'rtl', fontSize: "30px"}}>{HAS_TIME}</p>
-            <Countdown date={Date.now() + 300000950} renderer={renderer}>
+            <Countdown date={Date.now() + 30000000} renderer={renderer}>
             </Countdown>
             <p style={{ direction: 'rtl', fontSize: "25px" }}>{CLOSED_ORDERD}</p>
             <p style={{ direction: 'rtl', fontSize: "30px", color: 'red' }}>{SPECIAL_FREE_TEXT}</p>

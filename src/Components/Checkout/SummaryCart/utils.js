@@ -9,7 +9,7 @@ export const getTotalSum = (cart) => {
 export const getTotalCount = (cart) => {
     let totalCountSum = 0
     cart && cart.forEach(product => {
-        totalCountSum += product.count
+        totalCountSum += Number(product.count)
     })
     return totalCountSum + 1 // 1 for delivery
 }

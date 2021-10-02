@@ -1,0 +1,5 @@
+export const PRODUCT_TITLE = "מוצר"
+export const SUM_TITLE = "סכום"
+export const SUM_UNITS = "כמות"
+export const PRICE = "מחיר"
+export const TOTAL = "סך הכל"
