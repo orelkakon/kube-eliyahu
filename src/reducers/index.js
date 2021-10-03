@@ -6,6 +6,7 @@ export const cartReducer = (state = initialCart, action) => {
                 ...state,
                 {
                     name: action.payload.name,
+                    description: action.payload.description,
                     count: action.payload.count,
                     price: action.payload.price,
                 }

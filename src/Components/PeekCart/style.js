@@ -15,6 +15,7 @@ export const SendInvitation = styled.button`
     font-weight: bold;
     background-color: #cea086;
     border-radius: 12px;
+    margin: 2px;
 `;
 
 export const ProductsCart = styled.div`

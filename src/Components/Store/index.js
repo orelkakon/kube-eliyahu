@@ -24,9 +24,11 @@ const Store = () => {
             case EXPENSIVE_ORDER:
                 setProducts([...products].sort((a, b) => a.price >= b.price ? 1 : -1 ))
                 break
+            default:
+                break
         }
     }
-    const [products, setProducts] = useState([{ name: 'קובה בשר טחון ברוטב חמוסטה חמוץ צהוב ', price: 80, img: XXX }, { name: 'קובה חמו ברוטב במיה כתום', price: 50, img: XXX }, { name: 'קובה סיסקה ברוטב סלק אדום', price: 20, img: XXX }, { name: 'קובה בשר טחון ברוטב חמוסטה חמוץ צהוב ', price: 80, img: XXX }, { name: 'קובה בשר טחון ברוטב חמוסטה חמוץ צהוב ', price: 80, img: XXX }, { name: 'קובה חמו ברוטב במיה כתום', price: 50, img: XXX }])
+    const [products, setProducts] = useState([{ name: 'קובה בשר טחון ברוטב חמוסטה חמוץ צהוב ', description: 'שקית של 20 כדורים כ 650 גרם בצק ומילוי', price: 80, img: XXX }, { name: 'קובה חמו ברוטב במיה כתום', description: 'שקית של 20 כדורים כ 650 גרם בצק ומילוי', price: 50, img: XXX }, { name: 'קובה סיסקה ברוטב סלק אדום', description: 'שקית של 20 כדורים כ 650 גרם בצק ומילוי', price: 20, img: XXX }, { name: 'קובה בשר טחון ברוטב חמוסטה חמוץ צהוב ', description: 'שקית של 20 כדורים כ 650 גרם בצק ומילוי', price: 80, img: XXX }, { name: 'קובה בשר טחון ברוטב חמוסטה חמוץ צהוב ', description: 'שקית של 20 כדורים כ 650 גרם בצק ומילוי', price: 80, img: XXX }, { name: 'קובה חמו ברוטב במיה כתום', description: 'שקית של 20 כדורים כ 650 גרם בצק ומילוי', price: 50, img: XXX }])
     return (
         <FullStoreDiv>
             <p style={{ fontSize: "40px", fontWeight: "bold" }}>{TITLE}</p>
