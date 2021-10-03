@@ -1,10 +1,11 @@
 
-export const actionAddItem = (name, count) => {
+export const actionAddItem = (name, count, price) => {
   return({
     type: "ADD_ITEM_TO_CART",
     payload: {
       name,
-      count
+      count,
+      price
     }
   })
 }
