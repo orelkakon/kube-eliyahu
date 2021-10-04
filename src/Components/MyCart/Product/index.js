@@ -7,7 +7,7 @@ import { actionRemoveItem, actionUpdateItem } from '../../../actions/index'
 const Product = (props) => {
     const dispatch = useDispatch()
     return (
-        <ProductDiv addBreakLine={props.length !== props.index + 1}>
+        <ProductDiv addBreakLine={props.length !== props.key + 1}>
             <ProductImg src={XXX} alt="img" />
             <ProductContent>
                 <p style={{ fontSize: '20px' }}>{props.element.name}</p>

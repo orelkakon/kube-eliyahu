@@ -22,8 +22,8 @@ const PeekCart = (props) => {
                     <>
                         <ProductsCart>
                             {
-                                cart && cart.map((element, index) => {
-                                    return (<><Product index={index} element={element}/><br/></>)
+                                cart && cart.map((element) => {
+                                    return (<><Product element={element}/><br/></>)
                                 })
                             }
                         </ProductsCart>

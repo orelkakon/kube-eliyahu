@@ -22,7 +22,7 @@ const MyCart = () => {
                     <>
                         {
                             cart && cart.map((element, index) => {
-                                return (<><Product index={index} element={element} length={cart.length} /><br /></>)
+                                return (<><Product key={index} element={element} length={cart.length} /><br /></>)
                             })
                         }
                         <SummaryCart />

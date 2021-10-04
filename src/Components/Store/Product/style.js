@@ -25,7 +25,7 @@ export const ProductDetails = styled.p`
 
 export const AddToCartButton = styled.button`
     width: 120px;
-    height: 50px;
+    height: 25px;
     background-color: #cea086;
     border-radius: 5px;
     font-weight: bold;

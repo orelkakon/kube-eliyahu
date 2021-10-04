@@ -6,7 +6,7 @@ import Product from './Product/index'
 import SelectOrderBy from './OrderBy/index'
 import { useHistory } from "react-router-dom";
 
-const Store = () => {
+const Store = (props) => {
     let history = useHistory();
 
     const movePage = (path) => {
@@ -19,10 +19,10 @@ const Store = () => {
                 setProducts([...products].sort((a, b) => a.name > b.name ? 1 : -1 ))
                 break
             case CHEAP_ORDER:
-                setProducts([...products].sort((a, b) => a.price <= b.price ? 1 : -1 ))
+                setProducts([...products].sort((a, b) => a.price >= b.price ? 1 : -1 ))
                 break
             case EXPENSIVE_ORDER:
-                setProducts([...products].sort((a, b) => a.price >= b.price ? 1 : -1 ))
+                setProducts([...products].sort((a, b) => a.price <= b.price ? 1 : -1 ))
                 break
             default:
                 break
@@ -36,7 +36,7 @@ const Store = () => {
             <br />
             <StoreDiv>
                 {
-                    products && products.map((product) => <Product product={product} />)
+                    products && products.map((product, index) => <Product key={index} product={product} closeModal={props.closeModal}/>)
                 }
             </StoreDiv>
             <br /><br />

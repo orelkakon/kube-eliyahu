@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Icon, Count } from './style'
 import { useSelector } from 'react-redux'
 import Modal from 'react-modal';
@@ -19,26 +19,23 @@ const customStyles = {
     },
 };
 
-const CartIcon = () => {
+const CartIcon = (props) => {
     const counter = useSelector(state => state ? state.length : 0)
-    const [modalIsOpen, setIsOpen] = useState(false);
-    const closeOpenModal = () => setIsOpen(!modalIsOpen)
-
     return (
         <>
-            <Icon onClick={() => closeOpenModal()}>
+            <Icon onClick={() => props.openCloseModal()}>
                 <Count>
                     {counter}
                 </Count>
             </Icon>
             <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeOpenModal}
+                isOpen={props.modalIsOpen}
+                onRequestClose={props.openCloseModal}
                 style={customStyles}
                 ariaHideApp={false}
                 contentLabel="peek cart modal"
             >
-                <PeekCart closeModal={closeOpenModal}/>
+                <PeekCart closeModal={props.openCloseModal}/>
             </Modal>
         </>
     );

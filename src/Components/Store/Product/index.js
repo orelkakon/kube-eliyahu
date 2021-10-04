@@ -18,13 +18,15 @@ const customStyles = {
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#ece8e8',
         color: 'white',
-        zIndex: '-100'
     },
 };
 
 const Product = (props) => {
     const [modalIsOpen, setIsOpen] = useState(false);
-    const closeOpenModal = () => setIsOpen(!modalIsOpen)
+    const closeOpenModal = () => {
+        props.closeModal()
+        setIsOpen(!modalIsOpen)
+    }
     const dispatch = useDispatch()
     const mycart = useSelector(state => state)
     const addOrUpdateItem = (name) => {
@@ -46,7 +48,7 @@ const Product = (props) => {
                 ariaHideApp={false}
                 contentLabel="product details modal"
             >
-                <ProductDescription closeModal={closeOpenModal} product={props.product} addOrUpdateItem={addOrUpdateItem}/>
+                <ProductDescription closeModal={closeOpenModal} product={props.product} addOrUpdateItem={addOrUpdateItem} />
             </Modal>
         </ProductDiv>
     );
