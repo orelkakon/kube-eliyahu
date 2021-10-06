@@ -49,6 +49,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Header />
+        <><br /><br /><br /><br /><br /></>
         <ToastContainer />
         <WhatsappIcon />
         <CartIcon openCloseModal={openCloseModal} modalIsOpen={modalIsOpen}/>

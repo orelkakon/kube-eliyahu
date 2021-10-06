@@ -5,7 +5,7 @@ export const FullFooter = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: gray;
+    background-color: #cea086;
     @media only screen and (min-width: 960px) {
         height: 50px;
     }

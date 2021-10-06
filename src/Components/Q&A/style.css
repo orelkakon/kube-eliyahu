@@ -18,10 +18,9 @@
     content: '> ';
 }
 
-.pp{
-    font-size: 15px;
-}
-
 .content{
     background-color: #ece8e8;
+    font-size: 15px;
+    font-weight: 600;
+    direction: rtl;
 }

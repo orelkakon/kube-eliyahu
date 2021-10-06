@@ -1,0 +1,9 @@
+{
+    "host":"localhost",
+    "port":"1337",
+    "protocol":"http",
+    "urls":{
+        "homepageFreeText": "/homepage-free-text",
+        "getFaq": "/qand-as"
+    }
+}

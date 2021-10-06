@@ -1,15 +1,17 @@
 import styled from 'styled-components'
-import primaryLogo from './../../Assets/primaryLogo.png'
-
+import primaryLogo from './../../Assets/primaryLogoTiny.png'
+import HamburgerLogo from './../../Assets/hamburger.png'
 
 export const FullHeader = styled.div`
     display: flex;
-    background-color: #767c85;
-    justify-content: space-between;
+    background-color: #cea086;
+    justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 100px;
+    height: 105px;
+    top:0;
+    position: fixed;
     @media only screen and (min-width: 960px) {
         height: 200px;
     }
@@ -17,7 +19,7 @@ export const FullHeader = styled.div`
 
 export const MenuHeader = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
     @media only screen and (min-width: 960px) {
         margin-right: 30px;
@@ -26,14 +28,10 @@ export const MenuHeader = styled.div`
 `;
 
 export const MenuElement = styled.div`
-    padding: 5px;
-    @media only screen and (min-width: 960px) {
-        padding: 25px;
-    }
 `;
 
 export const PrimaryLogo = styled.button`
-    margin-right: 5px;
+    position: relative;
     border:none;
     cursor: pointer;
     background: url(${primaryLogo}) no-repeat center;
@@ -41,9 +39,26 @@ export const PrimaryLogo = styled.button`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 125px;
-    height: 95px;
-    border-radius: 200px 200px 200px 200px;
+    width: 100px;
+    height: 100px;
+    @media only screen and (min-width: 960px) {
+        width: 190px;
+        height: 190px;
+    }
+`;
+
+export const Hamburger = styled.button`
+    position: absolute;
+    left: 0;
+    border:none;
+    margin-left: 5px;
+    background: url(${HamburgerLogo}) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
     @media only screen and (min-width: 960px) {
         width: 190px;
         height: 190px;

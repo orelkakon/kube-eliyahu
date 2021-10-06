@@ -2,7 +2,9 @@
     text-decoration: none;
     color: black;
     font-size: 17px;
-    font-weight: 900;
+    font-weight: 500;
+    word-spacing: 7px;
+    letter-spacing: 4px;
 }
 @media only screen and (min-width: 960px) {
     #menu-list-item{
@@ -11,4 +13,14 @@
 }
 #menu-list-item:hover{
     text-decoration: underline;
+}
+
+#humb-close{
+    transform: rotate(0deg);
+    transition: transform 0.2s linear;
+}
+  
+#humb-open{
+    transform: rotate(90deg);
+    transition: transform 0.2s linear;
 }

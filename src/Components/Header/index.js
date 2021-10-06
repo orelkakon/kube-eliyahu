@@ -1,35 +1,49 @@
-import React from 'react';
-import { FullHeader, PrimaryLogo, MenuHeader, MenuElement } from './style'
-import { NavLink } from 'react-router-dom';
-import { HOME_PAGE, Q_AND_A, CONTACT, POLICY, RECOMMENDES } from './hebrew'
+import React, { useState } from 'react';
+import { FullHeader, PrimaryLogo, Hamburger } from './style'
+
+import HamburgerMenu from './Hamurger/index'
 import './style.css'
 import { useHistory } from "react-router-dom";
+import Modal from 'react-modal';
 
+const customStyles = {
+    content: {
+        top: '30%',
+        left: '50%',
+        right: 'auto',
+        width: '100%',
+        height: '30%',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: '#ece8e8',
+        color: 'white'
+    },
+};
 
 const Header = () => {
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const closeOpenModal = () => {
+        document.body.contains(document.getElementById("humb-close")) ?
+            document.getElementById("humb-close").id = "humb-open"
+            :
+            document.getElementById("humb-open").id = "humb-close"
+        setIsOpen(!modalIsOpen)
+    }
+
     let history = useHistory();
     return (
         <FullHeader>
-            <MenuHeader>
-                <MenuElement>
-                    <NavLink to="/policy" id="menu-list-item" >{POLICY}</NavLink>
-                </MenuElement>
-                <MenuElement>
-                    <NavLink to="/contact" id="menu-list-item" >{CONTACT}</NavLink>
-                </MenuElement>
-                <MenuElement>
-                    <NavLink to="/q-and-a" id="menu-list-item" >{Q_AND_A}</NavLink>
-                </MenuElement>
-                <MenuElement>
-                    <NavLink to="/recommends" id="menu-list-item" >{RECOMMENDES}</NavLink>
-                </MenuElement>
-                <MenuElement>
-                    <NavLink to="/" id="menu-list-item" >{HOME_PAGE}</NavLink>
-                </MenuElement>
-            </MenuHeader>
-
-            <PrimaryLogo onClick={() => history.push('/')}/>
-
+            <Hamburger id="humb-close" onClick={() => closeOpenModal()} />
+            <PrimaryLogo onClick={() => history.push('/')} />
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeOpenModal}
+                style={customStyles}
+                ariaHideApp={false}
+                contentLabel="hamburger modal"
+            >
+                <HamburgerMenu closeOpenModal={closeOpenModal} />
+            </Modal>
         </FullHeader>
     );
 };
