@@ -27,4 +27,15 @@ export const AddToCartButton = styled.button`
     border-radius: 5px;
     font-weight: bold;
     font-size: medium;
+    margin:5px;
+`;
+
+export const CloseDescription = styled.button`
+    width: 120px;
+    height: 30px;
+    background-color: #cea086;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: medium;
+    margin:5px;
 `;

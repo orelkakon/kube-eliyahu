@@ -1,9 +1,9 @@
 {
-    "host":"localhost",
+    "host":"172.20.10.5",
     "port":"1337",
     "protocol":"http",
     "urls":{
-        "homepageFreeText": "/homepage-free-text",
+        "basicData": "/homepage-free-text",
         "getFaq": "/qand-as"
     }
 }

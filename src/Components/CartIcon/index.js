@@ -6,7 +6,7 @@ import PeekCart from './../PeekCart/index';
 
 const customStyles = {
     content: {
-        top: '45%',
+        top: '53%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
@@ -15,7 +15,7 @@ const customStyles = {
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#ece8e8',
-        color: 'white'
+        color: 'white',
     },
 };
 
@@ -28,7 +28,7 @@ const CartIcon = (props) => {
                     {counter}
                 </Count>
             </Icon>
-            <Modal
+            <Modal 
                 isOpen={props.modalIsOpen}
                 onRequestClose={props.openCloseModal}
                 style={customStyles}

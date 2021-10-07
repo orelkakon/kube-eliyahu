@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 export const ProductDiv = styled.div`
+    position: relative;
     display: flex;
-    justify-content: center;
     text-align: center;
     flex-direction: column;
     align-items: center;
-    height: 320px;
+    height: 340px;
     width: 180px;
-    margin: 5px;
+    margin: 10px;
 `;
 
 export const ProductImg = styled.img`
@@ -24,6 +24,8 @@ export const ProductDetails = styled.p`
 `;
 
 export const AddToCartButton = styled.button`
+    position: absolute;
+    bottom: 0;
     width: 120px;
     height: 25px;
     background-color: #cea086;

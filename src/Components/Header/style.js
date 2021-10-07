@@ -12,6 +12,7 @@ export const FullHeader = styled.div`
     height: 105px;
     top:0;
     position: fixed;
+    z-index:10;
     @media only screen and (min-width: 960px) {
         height: 200px;
     }

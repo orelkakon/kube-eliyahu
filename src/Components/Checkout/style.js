@@ -12,6 +12,8 @@ export const CheckoutForm = styled.div`
     width: 80%;
     height: auto;
     border: 2px solid double;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 0 9px 2px rgba(0, 0, 0, 25%);
     box-shadow: 0 0 9px 2px rgba(0, 0, 0, 25%);
 `;
 
@@ -24,6 +26,8 @@ export const InputTextBox = styled.input`
     width: 190px;
     font-size: 16px;
     background-color: #97999c;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 25%);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 25%);
     ::placeholder{
         color: #252626;

@@ -11,6 +11,8 @@ export const CountCube = styled.div`
     height: 110px;
     border: black 3px solid;
     border-radius: 5px;
+    -webkit-appearance: none;
+    -webkit-box-shadow:gray 5px 5px;
     box-shadow: gray 5px 5px;
     font-size: 35px;
     padding: 3px;

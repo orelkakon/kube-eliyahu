@@ -15,24 +15,30 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     }
 };
 
-const getHomePageData = async (setSpecialFreeText) => {
+const getHomePageData = async (setSpecialFreeText, setOrderTime) => {
     const free_text = await axios({
         method: 'get',
-        url: `${config.protocol}://${config.host}:${config.port}${config.urls.homepageFreeText}`
+        url: `${config.protocol}://${config.host}:${config.port}${config.urls.basicData}`
+    })
+    const order_time = await axios({
+        method: 'get',
+        url: `${config.protocol}://${config.host}:${config.port}${config.urls.basicData}`
     })
     setSpecialFreeText(free_text.data.homepage_free_text)
+    setOrderTime(order_time.data.order_time)
     return
 }  
 
 const CountDownDate = () => {
     const [specialFreeText, setSpecialFreeText] = useState("")
+    const [orderTime, setOrderTime] = useState("")
     useEffect(() => {
-        getHomePageData(setSpecialFreeText)
+        getHomePageData(setSpecialFreeText, setOrderTime)
     }, [])  
     return (
         <CountDownDateDiv>
             <p style={{ direction: 'rtl', fontSize: "30px" }}>{HAS_TIME}</p>
-            <Countdown date={Date.now() + 30000000} renderer={renderer}>
+            <Countdown date={new Date(orderTime)} renderer={renderer}>
             </Countdown>
             <p style={{ direction: 'rtl', fontSize: "25px" }}>{CLOSED_ORDERD}</p>
             <p style={{ direction: 'rtl', fontSize: "30px", color: 'red' }}>{specialFreeText}</p>
