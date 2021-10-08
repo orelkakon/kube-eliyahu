@@ -21,7 +21,7 @@ const SummaryCart = () => {
                     {
                         cart && cart.map((product, index) => {
                             return (<tr key={index}>
-                                <td>{`${product.price} X ${product.count} = ${product.price * product.count}`}</td>
+                                <td>{`${product.price * product.count} ₪`}</td>
                                 <td>{product.count}</td>
                                 <td>{product.name}</td>
                             </tr>)

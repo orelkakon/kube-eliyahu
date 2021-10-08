@@ -36,8 +36,6 @@ const MyCart = () => {
             <br />
             <br />
             <br />
-            <br />
-            <br />
         </MyCartDiv>
     );
 };

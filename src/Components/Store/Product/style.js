@@ -14,9 +14,6 @@ export const ProductDiv = styled.div`
 export const ProductImg = styled.img`
     width: 180px;
     height: 170px;
-    &:hover{
-        transform: scale(1.25);
-    }
 `;
 
 export const ProductDetails = styled.p`

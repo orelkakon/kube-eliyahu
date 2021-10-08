@@ -34,9 +34,11 @@ const Store = (props) => {
     return (
         <FullStoreDiv>
             <p style={{ fontSize: "40px", fontWeight: "bold" }}>{TITLE}</p>
-            <Filter setFilterString={setFilterString} />
-            <br />
-            <SelectOrderBy orderResultsBy={orderResultsBy} />
+            
+            <div style={{display:'flex', justifyContent:'space-between'}}>
+                <SelectOrderBy orderResultsBy={orderResultsBy} />
+                <Filter setFilterString={setFilterString} />
+            </div>
             <br />
             <StoreDiv>
                 {

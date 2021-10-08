@@ -5,6 +5,9 @@ export const StoreDiv = styled.div`
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    direction: rtl;
+    align-items: center;
+    min-height: 30vh;
 `;
 
 export const SendInvitation = styled.button`

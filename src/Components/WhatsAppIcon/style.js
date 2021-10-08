@@ -9,8 +9,8 @@ export const Icon = styled.a`
     -o-background-size: cover;
     background-size: cover;
     border: none;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     bottom: 30px;
     right: 15px;
     z-index: 10;

@@ -6,7 +6,7 @@ export const MyCartDiv = styled.div`
     flex-direction:column;
     text-align: center;
     align-items: center;
-
+    min-height: 100vh;
     color: black;
 `;
 

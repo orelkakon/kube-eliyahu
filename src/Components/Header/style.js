@@ -14,7 +14,7 @@ export const FullHeader = styled.div`
     position: fixed;
     z-index:10;
     @media only screen and (min-width: 960px) {
-        height: 200px;
+        height: 90px;
     }
 `;
 
@@ -43,8 +43,8 @@ export const PrimaryLogo = styled.button`
     width: 100px;
     height: 100px;
     @media only screen and (min-width: 960px) {
-        width: 190px;
-        height: 190px;
+        width: 100px;
+        height: 90px;
     }
 `;
 
@@ -58,10 +58,10 @@ export const Hamburger = styled.button`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     @media only screen and (min-width: 960px) {
-        width: 190px;
-        height: 190px;
+        width: 50px;
+        height: 50px;
     }
 `;

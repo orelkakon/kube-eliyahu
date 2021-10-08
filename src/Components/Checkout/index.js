@@ -4,6 +4,7 @@ import { EMPTY_CONTENT, ERROR_POLICY, ERROR_ADDRESS, ERROR_PHONE, TITLE, SEC_TIT
 import SummaryCart from './SummaryCart/index'
 import Payment from './Payment/index'
 import { notifyWarn } from './../../App';
+import { useHistory } from "react-router-dom";
 
 
 const Checkout = () => {
@@ -17,7 +18,11 @@ const Checkout = () => {
     const [email, setEmail] = useState("")
     const [optionalData, setOptionalData] = useState("")
     const [policy, setPolicy] = useState(false)
+    let history = useHistory();
 
+    const movePage = (path) => {
+        history.push(path)
+    }
     const checkFields = () => {
         if(firstName.length === 0 || lastName.length === 0 || city.length === 0){
             notifyWarn(EMPTY_CONTENT)
@@ -81,7 +86,7 @@ const Checkout = () => {
                 <Payment firstName={firstName} lastName={lastName} city={city} address={address} appartmentNum={appartmentNum} phone={phone} email={email} optionalData={optionalData}/> {/* outsorce component*/}
                 <CheckboxPolicy>
                     <Required>*</Required>
-                    <p>קראתי את <a href="/policy" target="_blank" rel="noreferrer">תנאי השימוש</a> ואני מסכים</p>
+                    <p>קראתי את <a onClick={() => movePage('/policy')} style={{textDecoration:'underline', color:"blue", cursor:'pointer'}}>תנאי השימוש</a> ואני מסכים</p>
                     <Policy type="checkbox" onClick={() => setPolicy(!policy)} />
                 </CheckboxPolicy>
                 <br /><br />

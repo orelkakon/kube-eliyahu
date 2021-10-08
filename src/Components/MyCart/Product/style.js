@@ -16,6 +16,7 @@ export const ProductContent = styled.div`
     align-items: center;
     flex-direction: column;
     width: 200px;
+    margin-right: 3px;
 `;
 
 export const ProductImg = styled.img`

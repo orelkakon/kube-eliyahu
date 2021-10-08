@@ -6,6 +6,7 @@ export const Count = styled.div`
     height: 10px;
     font-size: 18px;
     font-weight: bold;
+    color: white;
 `;
 
 export const Icon = styled.button`

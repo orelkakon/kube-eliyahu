@@ -11,7 +11,7 @@ export const ProductDiv = styled.div`
 
 export const ProductImg = styled.img`
     width: 300px;
-    height: 260px;
+    height: 250px;
 `;
 
 export const ProductDetails = styled.p`
