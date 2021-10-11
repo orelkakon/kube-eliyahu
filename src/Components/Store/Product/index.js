@@ -35,9 +35,24 @@ const Product = (props) => {
     const mycart = useSelector(state => state)
     const addOrUpdateItem = (name) => {
         const existProduct = mycart && mycart.find(product => product.name === name);
-        existProduct ?
-            dispatch(actionUpdateItem(props.product.name, existProduct.count + 1)) :
-            dispatch(actionAddItem(props.product.name, props.product.description, 1, props.product.price,`${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`))
+        if (existProduct) {
+            dispatch(actionUpdateItem(props.product.name, Number(existProduct.count) + 1))
+            localStorage.setItem(name, JSON.stringify({
+                'description': props.product.description,
+                'count': Number(existProduct.count) + 1,
+                'price': props.product.price,
+                'imgUrl': `${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`
+            }))
+        }
+        else {
+            dispatch(actionAddItem(props.product.name, props.product.description, 1, props.product.price, `${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`))
+            localStorage.setItem(name, JSON.stringify({
+                'description': props.product.description,
+                'count': 1,
+                'price': props.product.price,
+                'imgUrl': `${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`
+            }))
+        }
         notifySuccees(ADD_TO_CART_SUCCESS)
     }
     return (
@@ -45,7 +60,7 @@ const Product = (props) => {
             <ProductImg src={`${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`} alt="fail" onClick={() => closeOpenModal()} />
             <ProductDetails onClick={() => closeOpenModal()}>{props.product.name}</ProductDetails>
             <ProductDetails>{'₪' + props.product.price}</ProductDetails>
-            <AddToCartButton onClick={() => addOrUpdateItem(props.product.name)}>{ADD_TO_CART}</AddToCartButton>            
+            <AddToCartButton onClick={() => addOrUpdateItem(props.product.name)}>{ADD_TO_CART}</AddToCartButton>
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeOpenModal}

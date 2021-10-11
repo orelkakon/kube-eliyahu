@@ -12,6 +12,7 @@ const Product = (props) => {
     const deleteProduct = () => {
         notifySuccees(DELETE_SUCCESS)
         dispatch(actionRemoveItem(props.element.name))
+        localStorage.removeItem(props.element.name)
     }
     return (
         <ProductDiv>
