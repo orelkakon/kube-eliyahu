@@ -6,6 +6,7 @@ import { createStore } from 'redux'
 import { cartReducer } from './reducers/index'
 import { Provider } from 'react-redux'
 import { actionAddItem } from './actions/index'
+import { decrypt } from './security/index'
 
 const store = createStore(cartReducer);
 
@@ -17,7 +18,7 @@ for (let i = 0; i < localStorage.length; i++) {
       productObject.description,
       productObject.count,
       productObject.price,
-      productObject.imgUrl
+      decrypt(productObject.imgUrl)
     ))
   }
 }

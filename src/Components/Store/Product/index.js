@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import ProductDescription from './../ProductDescription/index'
 import { notifySuccees } from './../../../App';
 import config from './../../../config.json'
-
+import { encrypt } from './../../../security/index'
 
 const customStyles = {
     content: {
@@ -41,7 +41,7 @@ const Product = (props) => {
                 'description': props.product.description,
                 'count': Number(existProduct.count) + 1,
                 'price': props.product.price,
-                'imgUrl': `${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`
+                'imgUrl': encrypt(`${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`)
             }))
         }
         else {
@@ -50,7 +50,7 @@ const Product = (props) => {
                 'description': props.product.description,
                 'count': 1,
                 'price': props.product.price,
-                'imgUrl': `${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`
+                'imgUrl': encrypt(`${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`)
             }))
         }
         notifySuccees(ADD_TO_CART_SUCCESS)

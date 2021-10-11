@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { actionRemoveItem, actionUpdateItem } from '../../../actions/index'
 import { notifySuccees } from './../../../App';
 import { DELETE_SUCCESS } from './hebrew'
+import { encrypt } from './../../../security/index'
 
 const Product = (props) => {
     const dispatch = useDispatch()
@@ -20,7 +21,7 @@ const Product = (props) => {
             'description': props.element.description,
             'count': Number(value),
             'price': props.element.price,
-            'imgUrl': props.element.imgUrl
+            'imgUrl': encrypt(props.element.imgUrl)
         }))
     }
     return (
