@@ -1,5 +1,4 @@
 import React from 'react';
-import XXX from './../../../Assets/r2.png'
 import { ProductDiv, ProductContent, DeleteButton, ProductImg, SumInput } from './style'
 import { useDispatch } from 'react-redux'
 import { actionRemoveItem, actionUpdateItem } from '../../../actions/index'
@@ -16,7 +15,7 @@ const Product = (props) => {
 
     return (
         <ProductDiv addBreakLine={props.length !== props.key + 1}>
-            <ProductImg src={XXX} alt="img" />
+            <ProductImg src={props.element.imgUrl} alt="img" />
             <ProductContent>
                 <p style={{ fontSize: '20px' }}>{props.element.name}</p>
                 <SumInput defaultValue={props.element.count} type="number" min="1" max="1000" onChange={e => e.target.value >= 0 ? dispatch(actionUpdateItem(props.element.name, e.target.value)) : alert("לא ניתן לשים מספר שלילי")}></SumInput>

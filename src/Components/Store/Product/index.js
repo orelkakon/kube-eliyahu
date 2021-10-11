@@ -6,6 +6,7 @@ import { actionAddItem, actionUpdateItem } from '../../../actions/index'
 import Modal from 'react-modal';
 import ProductDescription from './../ProductDescription/index'
 import { notifySuccees } from './../../../App';
+import config from './../../../config.json'
 
 
 const customStyles = {
@@ -36,12 +37,12 @@ const Product = (props) => {
         const existProduct = mycart && mycart.find(product => product.name === name);
         existProduct ?
             dispatch(actionUpdateItem(props.product.name, existProduct.count + 1)) :
-            dispatch(actionAddItem(props.product.name, props.product.description, 1, props.product.price))
+            dispatch(actionAddItem(props.product.name, props.product.description, 1, props.product.price,`${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`))
         notifySuccees(ADD_TO_CART_SUCCESS)
     }
     return (
         <ProductDiv>
-            <ProductImg src={props.product.img} alt="fail" onClick={() => closeOpenModal()} />
+            <ProductImg src={`${config.protocol}://${config.host}:${config.port}${props.product.image[0].url}`} alt="fail" onClick={() => closeOpenModal()} />
             <ProductDetails onClick={() => closeOpenModal()}>{props.product.name}</ProductDetails>
             <ProductDetails>{'₪' + props.product.price}</ProductDetails>
             <AddToCartButton onClick={() => addOrUpdateItem(props.product.name)}>{ADD_TO_CART}</AddToCartButton>            

@@ -86,7 +86,7 @@ const Checkout = () => {
                 <Payment firstName={firstName} lastName={lastName} city={city} address={address} appartmentNum={appartmentNum} phone={phone} email={email} optionalData={optionalData}/> {/* outsorce component*/}
                 <CheckboxPolicy>
                     <Required>*</Required>
-                    <p>קראתי את <a onClick={() => movePage('/policy')} style={{textDecoration:'underline', color:"blue", cursor:'pointer'}}>תנאי השימוש</a> ואני מסכים</p>
+                    <p>קראתי את <button onClick={() => movePage('/policy')} style={{textDecoration:'underline', color:"blue", cursor:'pointer', border:'none', width:'81px', padding:'0px !important', margin:'0px !important'}}>תנאי השימוש</button> ואני מסכים</p>
                     <Policy type="checkbox" onClick={() => setPolicy(!policy)} />
                 </CheckboxPolicy>
                 <br /><br />

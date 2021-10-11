@@ -4,6 +4,7 @@
     "protocol":"http",
     "urls":{
         "basicData": "/homepage-free-text",
-        "getFaq": "/qand-as"
+        "getFaq": "/qand-as",
+        "getProducts": "/products"
     }
 }

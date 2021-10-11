@@ -23,4 +23,13 @@ export const ContactDiv = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    min-height: 80vh;
+    justify-content: space-between;
+`;
+
+export const IconsDiv = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
 `;
