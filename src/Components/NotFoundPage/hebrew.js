@@ -1,0 +1,1 @@
+export const RETURN_HOME = "חזור לדף הבית"

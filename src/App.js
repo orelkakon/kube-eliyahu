@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Components/Header/index'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import HomePage from './Components/HomePage/index'
 import Footer from './Components/Footer/index'
 import Contact from './Components/Contact/index'
@@ -12,6 +12,7 @@ import CartIcon from './Components/CartIcon/index'
 import Store from './Components/Store/index'
 import Checkout from './Components/Checkout/index'
 import MyCart from './Components/MyCart/index'
+import NotFoundPage from './Components/NotFoundPage/index'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -52,13 +53,12 @@ const App = () => {
         <><br /><br /><br /><br /><br /></>
         <ToastContainer />
         <WhatsappIcon />
-        <CartIcon openCloseModal={openCloseModal} modalIsOpen={modalIsOpen}/>
+        <CartIcon openCloseModal={openCloseModal} modalIsOpen={modalIsOpen} />
         <Route path="/" exact strict render={
           () => (
             <HomePage />
           )
         } />
-
         <Route path="/recommends" exact strict render={
           () => (
             <Recommends />
@@ -81,7 +81,7 @@ const App = () => {
         } />
         <Route path="/store" exact strict render={
           () => (
-            <Store closeModal={closeModal}/>
+            <Store closeModal={closeModal} />
           )
         } />
         <Route path="/checkout" exact strict render={
@@ -94,9 +94,13 @@ const App = () => {
             <MyCart />
           )
         } />
-
+        <Route path="/404" exact strict render={
+          () => (
+            <NotFoundPage />
+          )
+        } />
+        {/* <Redirect to="/404" /> */}
         <Footer />
-
       </BrowserRouter>
     </>
   );
